@@ -1,21 +1,27 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-16 14:35:52
- * @LastEditTime: 2021-07-16 14:37:01
+ * @LastEditTime: 2021-07-16 17:38:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\views\home\childComps\FeatrueView.vue
 -->
 <template>
-  
+  <div class="feature">
+    <a href="https://act.mogujie.com/zzlx67">
+      <img src="../../../assets/img/home/recommend_bg.jpg" alt="">
+    </a>
+  </div>
 </template>
 
 <script>
 export default {
-  name:'FeatrueView'
+  name:'FeatureView'
 }
 </script>
 
 <style scoped>
-  
+  .feature img{
+    width: 100%;
+  }
 </style>
