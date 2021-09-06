@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-17 21:31:05
- * @LastEditTime: 2021-07-21 20:41:18
+ * @LastEditTime: 2021-09-06 17:04:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\components\content\goods\GoodsListItem.vue
@@ -33,7 +33,10 @@ export default {
         this.$bus.$emit('itemImageLoad')
       },
       itemClick() {
-        this.$router.push('/detail/' + this.goodsItem.iid)
+        // this.$router.push('/detail/' + this.goodsItem.iid)
+        let iid = this.goodsItem.iid;
+
+        this.$router.push({path: '/detail', query: {iid}})
       }
     }
 }

@@ -1,32 +1,38 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-01 19:48:37
- * @LastEditTime: 2021-07-07 15:17:04
+ * @LastEditTime: 2021-09-06 17:40:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\App.vue
 -->
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive exclude="Detail">
+      <router-view></router-view>
+    </keep-alive>
     <tab-bar>
       <tab-bar-item
         @click.native="btnClick(index)"
         :class="{ active: index == isActive }"
         v-for="(item, index) in tabbarlist"
-        :path='item.path'
+        :link='item.path'
         :key="index"
       >
         <span :class="name" slot="item-icon" v-html="item.icon"></span>
         <div slot="item-text">{{ item.text }}</div>
       </tab-bar-item>
     </tab-bar>
+    <icon></icon>
+    <svg-icon></svg-icon>
   </div>
 </template>
 
 <script>
 import TabBar from "../src/components/common/tabbar/TabBar.vue";
 import TabBarItem from "../src/components/common/tabbar/TabBarItem.vue";
+import Icon from '../src/components/content/Icon/Icon.vue';
+import SvgIcon from '../src/components/content/Icon/svg.vue';
 
 export default {
   name: "App",
@@ -45,6 +51,8 @@ export default {
   components: {
     TabBar,
     TabBarItem,
+    Icon,
+    SvgIcon
   },
   methods: {
     btnClick: function (index) {
@@ -76,5 +84,9 @@ export default {
 }
 .active {
   color: var(--color-high-text);
+}
+
+#app{
+  position: relative;
 }
 </style>

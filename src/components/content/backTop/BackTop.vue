@@ -1,25 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-21 13:22:04
- * @LastEditTime: 2021-07-21 15:15:15
+ * @LastEditTime: 2021-07-22 17:01:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\components\content\backTop\BackTop.vue
 -->
 <template>
   <div class="back-top">
-    <img src="../../../assets/img/common/top.png" alt="" @click="backClick">
+    <img src="../../../assets/img/common/top.png" alt="">
   </div>
 </template>
 
 <script>
 export default {
-  name:'BackTop',
-  methods: {
-    backClick(){
-      
-    }
-  },
+  name:'BackTop'
 }
 </script>
 

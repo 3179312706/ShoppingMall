@@ -1,46 +1,27 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-07-14 15:59:19
+ * @LastEditTime: 2021-09-06 17:21:16
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \mall\ShoppingMall\src\views\home\childComps\RecommendView.vue
+-->
 <template>
   <div class="recommend">
-    <div v-for="(item,index) in recommends" :key="index" class="recommed-item">
-      <a :href="item.link">
-        <img :src="item.image" alt="item.title">
-        <div>{{item.title}}</div>
-      </a>
-    </div>
+    <a href="http://act.mogujie.com/zzlx67">
+      <img src="~assets/img/home/recommend_bg.jpg" alt="">
+    </a>
   </div>
 </template>
 
 <script>
-export default {
-  name:'RecommendView',
-  props:{
-    recommends:{
-      type:Array,
-      default(){
-        return []
-      }
-    }
-  }
-}
+	export default {
+		name: "RecommendView"
+	}
 </script>
 
 <style scoped>
-.recommend{
-  display: flex;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-  padding: 10px 0 20px;
-  border-bottom: 8px solid #eee;
-  justify-content: space-around;
-}
-
-.recommend .recommend-item{
-  flex: 1;
-}
-
-.recommed-item img{
-  width: 90%;
-  height: 90%;
-  margin-bottom: 10px;
-}
+  .recommend img {
+    width: 100%;
+  }
 </style>

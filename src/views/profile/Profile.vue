@@ -1,21 +1,109 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-04 13:05:15
- * @LastEditTime: 2021-07-04 14:07:20
+ * @LastEditTime: 2021-09-06 15:49:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\views\profile\Profile.vue
 -->
 <template>
-  <h2>我的</h2>
+  <div id="profile">
+    <nav-bar class="nav-bar"><div slot="center">购物街</div></nav-bar>
+    <UserInfo></UserInfo>
+
+    <section class="account">
+      <div class="account-item">
+        <div class="number">
+          <span class="balance">0.00</span>元
+        </div>
+        <div class="account-info">我的余额</div>
+      </div>
+      <div class="account-item">
+        <div class="number">
+          <span class="balance">0</span>个
+        </div>
+        <div class="account-info">我的优惠</div>
+      </div>
+      <div class="account-item">
+        <div class="number">
+          <span class="balance">0</span>分
+        </div>
+        <div class="account-info">我的积分</div>
+      </div>
+    </section>
+
+    <list-view :list-data="orderList" class="order-list"></list-view>
+    <list-view :list-data="serviceList" class="service-list"></list-view>
+  </div>
 </template>
 
 <script>
-export default {
-  name:"profile"
-}
+  import UserInfo from './childComps/UserInfo'
+  import ListView from './childComps/ListView'
+  import NavBar from '../../components/common/navbar/NavBar'
+
+	export default {
+		name: "Profile",
+    components: {
+		  UserInfo, ListView, NavBar
+    },
+    data: function () {
+		  return {
+		    orderList: [
+          {icon: '#order', iconColor: '#ff8198', info: '我的消息'},
+          {icon: '#point', iconColor: '#fc7b53', info: '积分商城'},
+          {icon: '#vip', iconColor: '#ffc636', info: '会员卡'},
+        ],
+        serviceList: [
+          {icon: '#service', iconColor: '#ff8198', info: '我的购物车'},
+          {icon: '#download', iconColor: '#ff8198', info: '下载购物APP'},
+        ]
+      }
+    }
+	}
 </script>
 
 <style scoped>
+  #profile {
+    background-color: #f2f2f2;
+  }
+
+  .nav-bar {
+    background-color: #ff5777;
+    color: #fff;
+  }
+
+  .account {
+    display: flex;
+    width: 100%;
+  }
+
+  .account-item {
+    flex: 1;
+    background-color: #fff;
+    margin-right: 1px;
+    text-align: center;
+  }
+
+
+  .account-item {
+    color: #666;
+    font-size: 13px;
+    padding: 14px;
+  }
+
+  .account-item .balance {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff5f3e;
+  }
+
+  .account-info {
+    margin-top: 6px;
+  }
+
+  .order-list, .service-list {
+    margin-top: 12px;
+  }
 
 </style>

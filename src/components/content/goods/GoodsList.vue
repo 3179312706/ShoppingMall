@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-17 21:30:50
- * @LastEditTime: 2021-07-18 16:31:56
+ * @LastEditTime: 2021-09-06 17:06:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\components\content\goods\GoodsList.vue
@@ -14,6 +14,7 @@
 
 <script>
 import GoodsListItem from './GoodsListItem.vue'
+import GridView from '../../common/gridView/GridView'
 
 export default {
   name:'GoodsList',
@@ -26,6 +27,7 @@ export default {
     }
   },
   components:{
+    GridView,
     GoodsListItem
   }
 }
