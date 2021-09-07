@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-04 13:04:31
- * @LastEditTime: 2021-09-06 14:41:41
+ * @LastEditTime: 2021-09-07 21:26:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\views\cart\Cart.vue
@@ -44,8 +44,7 @@
   }
 
   .nav-bar {
-    background-color: var(--color-tint);
-    font-weight: 700;
+    background-color: #ff5777;
     color: #fff;
   }
 

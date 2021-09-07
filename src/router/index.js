@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-01 19:48:38
- * @LastEditTime: 2021-09-06 17:31:04
+ * @LastEditTime: 2021-09-07 20:32:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\router\index.js
@@ -18,6 +18,10 @@ const Profile = ()=>import("@/views/profile/Profile.vue");
 const Detail = () => import('../views/detail/Detail')
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/home'
+  },
   {
     path: '/home',
     name: 'Home',

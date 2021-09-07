@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-04 13:05:03
- * @LastEditTime: 2021-09-06 17:21:44
+ * @LastEditTime: 2021-09-07 21:20:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\views\home\Home.vue
@@ -120,10 +120,8 @@ export default {
       this.$refs.scroll.scrollTo(0, 0);
     },
     contentScroll(position) {
-      // 1.判断BackTop是否显示
       this.isShowBackTop = (-position.y) > 1000;
 
-      // 2.决定tabControl是否吸顶(position: fixed)
       this.isTabFixed = (-position.y) > this.tabOffsetTop;
     },
     loadMore() {

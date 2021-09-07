@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-06 15:11:51
+ * @LastEditTime: 2021-09-07 21:18:16
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \mall\ShoppingMall\src\views\detail\childComps\DetailBaseInfo.vue
+-->
 <template>
   <div v-if="Object.keys(goods).length !== 0" class="base-info">
     <div class="info-title">{{goods.title}}</div>
@@ -66,7 +74,6 @@
     border-radius: 8px;
     margin-left: 5px;
 
-    /*让元素上浮一些: 使用相对定位即可*/
     position: relative;
     top: -8px;
   }

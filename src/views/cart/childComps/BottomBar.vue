@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-06 14:37:01
+ * @LastEditTime: 2021-09-07 21:17:03
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \mall\ShoppingMall\src\views\cart\childComps\BottomBar.vue
+-->
 <template>
   <div class="bottom-menu">
     <CheckButton class="select-all" @checkBtnClick="checkBtnClick" v-model="isSelectAll"></CheckButton>
@@ -30,10 +38,8 @@
     },
     methods: {
       checkBtnClick: function () {
-        // 1.判断是否有未选中的按钮
         let isSelectAll = this.$store.getters.cartList.find(item => !item.checked);
 
-        // 2.有未选中的内容, 则全部选中
         if (isSelectAll) {
           this.$store.state.cartList.forEach(item => {
             item.checked = true;

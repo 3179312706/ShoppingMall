@@ -60,7 +60,6 @@
 
   .shop-top {
     line-height: 45px;
-    /* 让元素垂直中心对齐 */
     display: flex;
     align-items: center;
   }

@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-06 15:11:51
+ * @LastEditTime: 2021-09-07 21:13:37
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \mall\ShoppingMall\src\views\detail\childComps\DetailGoodsInfo.vue
+-->
 <template>
   <div v-if="Object.keys(detailInfo).length !== 0" class="goods-info">
     <div class="info-desc clear-fix">
@@ -8,7 +16,7 @@
     </div>
     <div class="info-key">{{detailInfo.detailImage[0].key}}</div>
     <div class="info-list">
-      <img v-for="(item, index) in detailInfo.detailImage[0].list" :src="item" alt="">
+      <img v-for="(item, index) in detailInfo.detailImage[0].list" :src="item" alt="" :key="index">
     </div>
   </div>
 </template>
