@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-09-06 12:14:32
- * @LastEditTime: 2021-09-06 12:20:07
- * @LastEditors: your name
+ * @LastEditTime: 2021-09-27 20:01:06
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \HYMall-master\src\network\axios.js
  */
@@ -13,7 +13,7 @@ export default function axios(option) {
 	return new Promise((resolve, reject) => {
 		// 1.创建axios的实例
 		const instance = originAxios.create({
-			baseURL: 'http://152.136.185.210:7878/api/m5',
+			baseURL: 'http://152.136.185.210:7878/api/hy66',
 			timeout: 5000
 		});
 
