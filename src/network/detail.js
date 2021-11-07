@@ -1,11 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2021-07-21 21:47:55
- * @LastEditTime: 2021-09-06 15:53:30
- * @LastEditors: your name
+ * @LastEditTime: 2021-11-07 15:44:16
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\network\detail.js
  */
+import axios from "./axios";
 import {request} from "./request";
 
 export function getDetail(iid) {

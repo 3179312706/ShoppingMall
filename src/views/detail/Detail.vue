@@ -142,7 +142,6 @@
       },
       _getRecommend() {
         getRecommend().then((res, error) => {
-          if (error) return
           this.recommendList = res.data.list
         })
       }

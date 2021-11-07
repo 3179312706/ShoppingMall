@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-09-06 12:14:32
- * @LastEditTime: 2021-09-27 20:01:06
+ * @LastEditTime: 2021-11-07 15:22:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \HYMall-master\src\network\axios.js
@@ -25,7 +25,7 @@ export default function axios(option) {
 			// 2.某些请求要求用户必须登录, 判断用户是否有token, 如果没有token跳转到login页面
 
 			// 3.对请求的参数进行序列化(看服务器是否需要序列化)
-			// config.data = qs.stringify(config.data)
+			config.data = qs.stringify(config.data)
 			// console.log(config);
 
 			// 4.等等
