@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2021-07-21 21:47:55
- * @LastEditTime: 2021-11-17 13:18:53
+ * @LastEditTime: 2021-11-28 17:14:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mall\ShoppingMall\src\network\detail.js
  */
 import {request} from "./request";
-
+import axios from 'axios'
 export function getDetail(iid) {
   return request({
     url: '/detail',
@@ -19,7 +19,7 @@ export function getDetail(iid) {
 
 export function getRecommend() {
   return axios({
-    url: '/recommend'
+    url: 'http://152.136.185.210:7878/api/hy66/recommend'
   })
 }
 

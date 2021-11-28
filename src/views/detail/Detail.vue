@@ -73,7 +73,7 @@
       }
     },
     created() {
-		  this._getDetailData()
+		  this._getDetailData();
       this._getRecommend()
     },
     updated() {
